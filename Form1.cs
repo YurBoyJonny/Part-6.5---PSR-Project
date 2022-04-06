@@ -13,28 +13,31 @@ namespace Part_6._5___PSR_Project
     public partial class Form1 : Form
     {
         Random generator = new Random();
+        int playerChoice;
         public Form1()
         {
             InitializeComponent();
+            countDownTimer.Enabled = true;
+            txtCountDown.Text = "5";
         }
         private void radRock_CheckedChanged(object sender, EventArgs e)
         {
             imgPlayer.Image = Properties.Resources.ROCK;
+            playerChoice = 1;
         }
         private void radPaper_CheckedChanged(object sender, EventArgs e)
         {
             imgPlayer.Image = Properties.Resources.PAPERS;
+            playerChoice = 2;
         }
         private void radScissors_CheckedChanged(object sender, EventArgs e)
         {
-            imgPlayer.Image = Properties.Resources.EdSciss;
+            imgPlayer.Image = Properties.Resources.SCISSORS;
+            playerChoice = 3;
         }
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            int opponentResult = generator.Next(1,4);
-            string playerChoice = radRock;
-            
-
+            int opponentResult = generator.Next(1, 4);
             if (opponentResult == 1)
             {
                 imgOpponent.Image = Properties.Resources.ROCK;
@@ -45,15 +48,21 @@ namespace Part_6._5___PSR_Project
             }
             else if (opponentResult == 3)
             {
-                imgOpponent.Image = Properties.Resources.EdSciss;
+                imgOpponent.Image = Properties.Resources.SCISSORS;
             }
-
 
             if (opponentResult == playerChoice)
             {
-                lblResult.Text = "TIE";
+                lblResult.Text = "Tie";
             }
-
+            else if (opponentResult == 1 && playerChoice == 3 || opponentResult == 2 && playerChoice == 1 || opponentResult == 3 && playerChoice == 2)
+            {
+                lblResult.Text = "You Lose";
+            }
+            else if (opponentResult == 3 && playerChoice == 1 || opponentResult == 1 && playerChoice == 2 || opponentResult == 2 && playerChoice == 3)
+            {
+                lblResult.Text = "You Win";
+            }
         }
     }
 }
