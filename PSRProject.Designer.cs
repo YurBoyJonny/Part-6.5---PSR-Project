@@ -46,10 +46,16 @@
             this.lblPlayerPoints = new System.Windows.Forms.Label();
             this.lblOpponenetPoints = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblPlayerScore = new System.Windows.Forms.Label();
+            this.lblOpponentScore = new System.Windows.Forms.Label();
             this.grpPlayerChoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -66,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("BankGothic Md BT", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.label2.Font = new System.Drawing.Font("BankGothic Md BT", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(646, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 24);
@@ -80,7 +86,7 @@
             this.grpPlayerChoice.Controls.Add(this.radPaper);
             this.grpPlayerChoice.Controls.Add(this.radRock);
             this.grpPlayerChoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpPlayerChoice.Font = new System.Drawing.Font("BankGothic Md BT", 17.25F, System.Drawing.FontStyle.Bold);
+            this.grpPlayerChoice.Font = new System.Drawing.Font("BankGothic Md BT", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPlayerChoice.Location = new System.Drawing.Point(17, 170);
             this.grpPlayerChoice.Name = "grpPlayerChoice";
             this.grpPlayerChoice.Size = new System.Drawing.Size(241, 152);
@@ -131,10 +137,11 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSubmit.Font = new System.Drawing.Font("BankGothic Md BT", 17.25F);
-            this.btnSubmit.Location = new System.Drawing.Point(15, 325);
+            this.btnSubmit.Font = new System.Drawing.Font("BankGothic Md BT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSubmit.Location = new System.Drawing.Point(12, 325);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(243, 39);
+            this.btnSubmit.Size = new System.Drawing.Size(251, 39);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseMnemonic = false;
@@ -145,11 +152,11 @@
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(120, 367);
+            this.lblResult.Location = new System.Drawing.Point(130, 387);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(237, 29);
+            this.lblResult.Size = new System.Drawing.Size(97, 29);
             this.lblResult.TabIndex = 9;
-            this.lblResult.Text = "                                ";
+            this.lblResult.Text = "            ";
             // 
             // countDownTimer
             // 
@@ -182,7 +189,7 @@
             // 
             this.txtCountDown.AutoSize = true;
             this.txtCountDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.txtCountDown.Location = new System.Drawing.Point(423, 9);
+            this.txtCountDown.Location = new System.Drawing.Point(444, 8);
             this.txtCountDown.Name = "txtCountDown";
             this.txtCountDown.Size = new System.Drawing.Size(24, 25);
             this.txtCountDown.TabIndex = 10;
@@ -192,17 +199,17 @@
             // 
             this.lblCountdownLabel.AutoSize = true;
             this.lblCountdownLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
-            this.lblCountdownLabel.Location = new System.Drawing.Point(283, 9);
+            this.lblCountdownLabel.Location = new System.Drawing.Point(310, 8);
             this.lblCountdownLabel.Name = "lblCountdownLabel";
-            this.lblCountdownLabel.Size = new System.Drawing.Size(134, 25);
+            this.lblCountdownLabel.Size = new System.Drawing.Size(128, 25);
             this.lblCountdownLabel.TabIndex = 11;
-            this.lblCountdownLabel.Text = "Countdown: ";
+            this.lblCountdownLabel.Text = "Countdown:";
             // 
             // lblResultLabel
             // 
             this.lblResultLabel.AutoSize = true;
             this.lblResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultLabel.Location = new System.Drawing.Point(13, 367);
+            this.lblResultLabel.Location = new System.Drawing.Point(23, 387);
             this.lblResultLabel.Name = "lblResultLabel";
             this.lblResultLabel.Size = new System.Drawing.Size(101, 29);
             this.lblResultLabel.TabIndex = 12;
@@ -213,22 +220,20 @@
             this.lblPlayerPoints.AutoSize = true;
             this.lblPlayerPoints.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblPlayerPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayerPoints.Location = new System.Drawing.Point(283, 194);
+            this.lblPlayerPoints.Location = new System.Drawing.Point(383, 194);
             this.lblPlayerPoints.Name = "lblPlayerPoints";
-            this.lblPlayerPoints.Size = new System.Drawing.Size(122, 29);
+            this.lblPlayerPoints.Size = new System.Drawing.Size(0, 29);
             this.lblPlayerPoints.TabIndex = 13;
-            this.lblPlayerPoints.Text = "Player: 0 ";
             // 
             // lblOpponenetPoints
             // 
             this.lblOpponenetPoints.AutoSize = true;
             this.lblOpponenetPoints.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblOpponenetPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOpponenetPoints.Location = new System.Drawing.Point(401, 194);
+            this.lblOpponenetPoints.Location = new System.Drawing.Point(564, 194);
             this.lblOpponenetPoints.Name = "lblOpponenetPoints";
-            this.lblOpponenetPoints.Size = new System.Drawing.Size(156, 29);
+            this.lblOpponenetPoints.Size = new System.Drawing.Size(0, 29);
             this.lblOpponenetPoints.TabIndex = 14;
-            this.lblOpponenetPoints.Text = "Opponent: 0";
             // 
             // pictureBox1
             // 
@@ -236,9 +241,58 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(264, 177);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 67);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 370);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(241, 68);
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(283, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Player:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(423, 194);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 29);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Opponent:";
+            // 
+            // lblPlayerScore
+            // 
+            this.lblPlayerScore.AutoSize = true;
+            this.lblPlayerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerScore.Location = new System.Drawing.Point(383, 194);
+            this.lblPlayerScore.Name = "lblPlayerScore";
+            this.lblPlayerScore.Size = new System.Drawing.Size(27, 29);
+            this.lblPlayerScore.TabIndex = 19;
+            this.lblPlayerScore.Text = "0";
+            // 
+            // lblOpponentScore
+            // 
+            this.lblOpponentScore.AutoSize = true;
+            this.lblOpponentScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpponentScore.Location = new System.Drawing.Point(564, 194);
+            this.lblOpponentScore.Name = "lblOpponentScore";
+            this.lblOpponentScore.Size = new System.Drawing.Size(27, 29);
+            this.lblOpponentScore.TabIndex = 20;
+            this.lblOpponentScore.Text = "0";
             // 
             // PSRProject
             // 
@@ -246,6 +300,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblOpponentScore);
+            this.Controls.Add(this.lblPlayerScore);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblOpponenetPoints);
             this.Controls.Add(this.lblPlayerPoints);
             this.Controls.Add(this.lblResultLabel);
@@ -259,6 +317,7 @@
             this.Controls.Add(this.imgPlayer);
             this.Controls.Add(this.imgOpponent);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "PSRProject";
             this.Text = "Form1";
             this.grpPlayerChoice.ResumeLayout(false);
@@ -266,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +350,11 @@
         private System.Windows.Forms.Label lblPlayerPoints;
         private System.Windows.Forms.Label lblOpponenetPoints;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPlayerScore;
+        private System.Windows.Forms.Label lblOpponentScore;
     }
 }
 

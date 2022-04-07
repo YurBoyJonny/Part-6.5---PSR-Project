@@ -15,7 +15,9 @@ namespace Part_6._5___PSR_Project
     {
         Random generator = new Random();
         int playerChoice;
-        int countingDown;
+        int playerScore = 0;
+        int opponentScore = 0;
+
         public PSRProject()
         {
             InitializeComponent();
@@ -35,16 +37,19 @@ namespace Part_6._5___PSR_Project
             imgPlayer.Image = Properties.Resources.SCISSORS;
             playerChoice = 3;
         }
+        private int duration = 5;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (countDownTimer.Enabled == false)
+            duration = 5;
+            countDownTimer.Tick += new EventHandler(count_down);
+            countDownTimer.Interval = 1000;
+            countDownTimer.Start();
+        }
+        private void count_down(object sender, EventArgs e)
+        {
+            if (duration == 0)
             {
-                for (countingDown = 5; countingDown > 0; countingDown--)
-                {
-                    Thread.Sleep(100);
-                    txtCountDown.Text = "0";
-                }
-
+                countDownTimer.Stop();
                 int opponentResult = generator.Next(1, 4);
                 if (opponentResult == 1)
                 {
@@ -66,14 +71,18 @@ namespace Part_6._5___PSR_Project
                 else if (opponentResult == 1 && playerChoice == 3 || opponentResult == 2 && playerChoice == 1 || opponentResult == 3 && playerChoice == 2)
                 {
                     lblResult.Text = "Lose!";
+                    opponentScore += 1;
                 }
                 else if (opponentResult == 3 && playerChoice == 1 || opponentResult == 1 && playerChoice == 2 || opponentResult == 2 && playerChoice == 3)
                 {
                     lblResult.Text = "Win!";
+                    playerScore += 1;
                 }
-
-
-
+            }
+            else if (duration > 0)
+            {
+                duration--;
+                txtCountDown.Text = duration.ToString();
             }
         }
     }
