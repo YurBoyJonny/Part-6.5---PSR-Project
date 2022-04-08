@@ -17,7 +17,7 @@ namespace Part_6._5___PSR_Project
         int playerChoice;
         int playerScore = 0;
         int opponentScore = 0;
-
+        int duration = 5;
         public PSRProject()
         {
             InitializeComponent();
@@ -37,10 +37,10 @@ namespace Part_6._5___PSR_Project
             imgPlayer.Image = Properties.Resources.SCISSORS;
             playerChoice = 3;
         }
-        private int duration = 5;
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             duration = 5;
+            lblCountDown.Text = duration.ToString();
             countDownTimer.Tick += new EventHandler(count_down);
             countDownTimer.Interval = 1000;
             countDownTimer.Start();
@@ -63,7 +63,6 @@ namespace Part_6._5___PSR_Project
                 {
                     imgOpponent.Image = Properties.Resources.SCISSORS;
                 }
-
                 if (opponentResult == playerChoice)
                 {
                     lblResult.Text = "Tie!";
@@ -71,18 +70,20 @@ namespace Part_6._5___PSR_Project
                 else if (opponentResult == 1 && playerChoice == 3 || opponentResult == 2 && playerChoice == 1 || opponentResult == 3 && playerChoice == 2)
                 {
                     lblResult.Text = "Lose!";
-                    opponentScore += 1;
+                    opponentScore = opponentScore + 1;
+                    lblOpponentScore.Text = opponentScore.ToString();
                 }
                 else if (opponentResult == 3 && playerChoice == 1 || opponentResult == 1 && playerChoice == 2 || opponentResult == 2 && playerChoice == 3)
                 {
                     lblResult.Text = "Win!";
-                    playerScore += 1;
+                    playerScore = playerScore + 1;
+                    lblPlayerScore.Text = playerScore.ToString();
                 }
             }
             else if (duration > 0)
             {
                 duration--;
-                txtCountDown.Text = duration.ToString();
+                lblCountDown.Text = duration.ToString();
             }
         }
     }
