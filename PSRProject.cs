@@ -42,7 +42,6 @@ namespace Part_6._5___PSR_Project
             duration = 5;
             lblCountDown.Text = duration.ToString();
             countDownTimer.Tick += new EventHandler(count_down);
-            countDownTimer.Interval = 1000;
             countDownTimer.Start();
         }
         private void count_down(object sender, EventArgs e)
@@ -80,7 +79,7 @@ namespace Part_6._5___PSR_Project
                     lblPlayerScore.Text = playerScore.ToString();
                 }
             }
-            else if (duration > 0)
+            if (duration > 0)
             {
                 duration--;
                 lblCountDown.Text = duration.ToString();

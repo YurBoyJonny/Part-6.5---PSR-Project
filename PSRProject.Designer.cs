@@ -61,10 +61,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("BankGothic Md BT", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 28);
+            this.label1.Size = new System.Drawing.Size(65, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "You";
             // 
@@ -72,10 +72,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Font = new System.Drawing.Font("BankGothic Md BT", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(621, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 28);
+            this.label2.Size = new System.Drawing.Size(141, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Opponent";
             // 
@@ -86,7 +86,7 @@
             this.grpPlayerChoice.Controls.Add(this.radPaper);
             this.grpPlayerChoice.Controls.Add(this.radRock);
             this.grpPlayerChoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpPlayerChoice.Font = new System.Drawing.Font("BankGothic Md BT", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpPlayerChoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPlayerChoice.Location = new System.Drawing.Point(17, 170);
             this.grpPlayerChoice.Name = "grpPlayerChoice";
             this.grpPlayerChoice.Size = new System.Drawing.Size(273, 152);
@@ -137,7 +137,7 @@
             // btnSubmit
             // 
             this.btnSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSubmit.Font = new System.Drawing.Font("BankGothic Md BT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSubmit.Location = new System.Drawing.Point(12, 325);
             this.btnSubmit.Name = "btnSubmit";
